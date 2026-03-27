@@ -1,17 +1,16 @@
-/* Lock the dark background before any other CSS loads — defeats Bootstrap */
+/* Deep forest green base — defeats Bootstrap */
 html, body, #root {
-  background: #0a0e1a !important;
-  background-color: #0a0e1a !important;
+  background: #0d1f0f !important;
+  background-color: #0d1f0f !important;
   margin: 0 !important;
   padding: 0 !important;
   min-height: 100vh !important;
-  color: #e2eeff !important;
+  color: #e8fbe8 !important;
   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Defeat Bootstrap container white bg */
 .container-fluid,
 .container,
 .row {

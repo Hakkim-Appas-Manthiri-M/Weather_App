@@ -6,7 +6,7 @@ import Forecast from "./components/Forecast";
 import WeatherChart from "./components/WeatherChart";
 import "./App.css";
 
-const API_KEY = "e685d910cf3c5bc8813d8c9e2208b242";
+const API_KEY = process.env.REACT_APP_API_KEY
 
 function App() {
   const [city, setCity]         = useState("Chennai");
@@ -72,7 +72,7 @@ function App() {
         <header className="app-header">
           <div className="brand">
             <div className="brand-icon">🌤</div>
-            Skywatcher
+            WeatherX
           </div>
           <div className="live-clock">
             <div className="clock-time">{timeStr}</div>

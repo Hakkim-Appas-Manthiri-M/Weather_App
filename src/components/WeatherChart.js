@@ -31,26 +31,26 @@ function WeatherChart({ data }) {
         >
           <defs>
             <linearGradient id="tempGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"   stopColor="#3b82f6" stopOpacity={0.45} />
-              <stop offset="100%" stopColor="#3b82f6" stopOpacity={0.02} />
+              <stop offset="0%"   stopColor="#22c55e" stopOpacity={0.45} />
+              <stop offset="60%"  stopColor="#facc15" stopOpacity={0.18} />
+              <stop offset="100%" stopColor="#facc15" stopOpacity={0.02} />
             </linearGradient>
           </defs>
 
-          {/* Dark grid lines */}
           <CartesianGrid
-            stroke="#1e3a5f"
+            stroke="#1e4a22"
             strokeDasharray="4 4"
             vertical={false}
           />
 
           <XAxis
             dataKey="time"
-            tick={{ fill: "#3d6080", fontSize: 12, fontFamily: "Outfit, sans-serif", fontWeight: 600 }}
+            tick={{ fill: "#3d7a42", fontSize: 12, fontFamily: "Outfit, sans-serif", fontWeight: 600 }}
             axisLine={false}
             tickLine={false}
           />
           <YAxis
-            tick={{ fill: "#3d6080", fontSize: 12, fontFamily: "Outfit, sans-serif", fontWeight: 600 }}
+            tick={{ fill: "#3d7a42", fontSize: 12, fontFamily: "Outfit, sans-serif", fontWeight: 600 }}
             axisLine={false}
             tickLine={false}
             tickFormatter={(v) => `${v}°`}
@@ -58,17 +58,17 @@ function WeatherChart({ data }) {
 
           <Tooltip
             content={<CustomTooltip />}
-            cursor={{ stroke: "#2a4f7a", strokeWidth: 1.5 }}
+            cursor={{ stroke: "#2e6e34", strokeWidth: 1.5 }}
           />
 
           <Area
             type="monotone"
             dataKey="temp"
-            stroke="#3b82f6"
+            stroke="#22c55e"
             strokeWidth={2.5}
             fill="url(#tempGrad)"
-            dot={{ r: 4, fill: "#3b82f6", strokeWidth: 0 }}
-            activeDot={{ r: 6, fill: "#60a5fa", stroke: "#0a0e1a", strokeWidth: 2 }}
+            dot={{ r: 4, fill: "#facc15", strokeWidth: 0 }}
+            activeDot={{ r: 6, fill: "#facc15", stroke: "#0d1f0f", strokeWidth: 2 }}
           />
         </AreaChart>
       </ResponsiveContainer>
